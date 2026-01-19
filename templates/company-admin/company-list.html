@@ -459,7 +459,9 @@
                                                                     <div class="ag-react-container">
                                                                         <div class="comp-no-data">
                                                                             <div class="box-group">
-                                                                                <i class="ico ico-no-data"></i>
+                                                                                <!-- <i class="ico ico-no-data"></i> -->
+                                                                                 <!-- 노데이터 아이콘 -->
+                                                                                <img class="icon icon-no-data" src="/static/images/icon-no-data.svg">
                                                                                 <p class="fz-18 fc-2">데이터가 존재하지 않습니다.</p>
                                                                             </div>
                                                                         </div>
@@ -537,17 +539,23 @@
                                         </span>
                                         <span class="dropdown-wrapper" aria-hidden="true"></span>
                                     </span>
+                                    <!-- 페이지 이동 버튼 -->
                                     <div class="page-nav">
-                                        <button class="btn-nav first" disabled=""><i class="ico"></i></button>
-                                        <button class="btn-nav prev" disabled=""><i class="ico"></i></button>
+                                        <!-- 처음 -->
+                                        <button class="btn-nav first" disabled=""><img class="icon" src="/static/images/icon_double_arrow_left.svg"></button>
+                                        <!-- 이전 -->
+                                        <button class="btn-nav prev" disabled=""><img class="icon" src="/static/images/icon_light_gray_arrow_left.svg"></button>
                                         <a href="#!" class="page-num selected" data-value="1">1</a>
-                                        <button class="btn-nav next" disabled=""><i class="ico"></i></button>
-                                        <button class="btn-nav last" disabled=""><i class="ico"></i></button>
+                                        <!-- 다음 -->
+                                        <button class="btn-nav next" disabled=""><img class="icon" src="/static/images/icon_light_gray_arrow_right.svg"></button>
+                                        <!-- 맨끝 -->
+                                        <button class="btn-nav last" disabled=""><img class="icon" src="/static/images/icon_double_arrow_right.svg"></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <form>
+                        <!-- 광고 작성 영역 -->
+                        <!-- <form>
                             <div id="fbDialog" class="dialog" style="display: none">
                                 <div class="dialog-body">
                                     <div class="wrap-section no-border">
@@ -622,8 +630,8 @@
                                 </div>
                                 <div class="dialog-footer"><button id="itgClose" type="button" class="btn btn-secondary-outline large">닫기</button></div>
                             </div>
-                        </form>
-                        <form>
+                        </form> -->
+                        <!-- <form>
                             <div id="gdnDialog" class="dialog" style="display: none">
                                 <div class="dialog-body">
                                     <div class="wrap-section no-border">
@@ -649,10 +657,11 @@
                                 </div>
                                 <div class="dialog-footer"><button id="gdnClose" type="button" class="btn btn-secondary-outline large">닫기</button></div>
                             </div>
-                        </form>
+                        </form> -->
                     </section>
                 </div>
             </div>
+            <!-- 푸터 영역 -->
             <div class="content-footer">
                 <footer class="Footer-module__container__npT3S">
                     <address class="Footer-module__address__xdP3d">
