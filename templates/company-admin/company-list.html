@@ -29,7 +29,7 @@
             <!-- 목록 헤더 영역 -->
             <div class="content-header">
                 <div class="box-tit">
-                    <h2 class="fz-36 fc-1 fw-bold">후불 결제 내역</h2>
+                    <h2 class="fz-36 fc-1 fw-bold">충전기 이용 내역</h2>
                 </div>
             </div>
             <!-- 바디 영역 -->
@@ -40,7 +40,10 @@
                         <span class="tab-item">일간 내역</span>
                     </a>
                     <a class="tab" href="#">
-                        <span class="tab-item">상세 내역</span>
+                        <span class="tab-item">주간 내역</span>
+                    </a>
+                    <a class="tab" href="#">
+                        <span class="tab-item">월간 내역</span>
                     </a>
                 </div>
 
@@ -55,7 +58,7 @@
                                     <div class="box-left">
                                         <div class="item-filter">
                                             <div class="filter-tit">
-                                                <p class="fz-12 fc-2">조회기간</p>
+                                                <p class="fz-12 fc-2">조회일자</p>
                                             </div>
                                             <!-- 날짜 선택 박스 -->
                                             <div class="box-filter">
@@ -94,66 +97,66 @@
 
                         <!-- 바디) 목록 영역 -->
                         <div class="box-body">
-                            <div class="ag-grid">
-                                <div class="ag-grid-inner">
-                                    <div style="height: 100%; --ag-line-height: 48px;">
+                            <div class="list-grid">
+                                <div class="list-grid-inner">
+                                    <div style="height: 100%; --list-line-height: 48px;">
                                         <!-- AG Grid -->
-                                         <div class="ag-root-wrapper ag-ltr ag-keyboard-focus ag-layout-auto-height">
-                                            <div class="ag-root-wrapper-body ag-focus-managed ag-layout-auto-height">
+                                         <div class="list-root-wrapper list-ltr list-keyboard-focus list-layout-auto-height">
+                                            <div class="list-root-wrapper-body list-focus-managed list-layout-auto-height">
                                                 <!-- AG Body -->
-                                                 <div class="ag-root ag-unselectable ag-layout-auto-height">
+                                                 <div class="list-root list-unselectable list-layout-auto-height">
                                                     <!-- 행 제목 영역 -->
-                                                    <div class="ag-header ag-pivot-off" style="height: 26px; min-height: 26px;">
-                                                        <div class="ag-header-viewport ">
-                                                            <div class="ag-header-container" style="width: 1559px; transform: translateX(0px);">
-                                                                <div class="ag-header-row ag-header-row-column" style="height: 25px; top: 0px; width: 1559px;">
+                                                    <div class="list-header list-pivot-off" style="height: 26px; min-height: 26px;">
+                                                        <div class="list-header-viewport ">
+                                                            <div class="list-header-container" style="width: 1559px; transform: translateX(0px);">
+                                                                <div class="list-header-row list-header-row-column" style="height: 25px; top: 0px; width: 1559px;">
                                                                     
                                                                      <!-- #행 제목 구분 1 -->
-                                                                     <div class="ag-header-cell ag-header-cell-sortable ag-focus-managed" style="left: 0px; width: 312px;">
-                                                                        <div class="ag-header-cell-resize"></div>
-                                                                        <div class="ag-cell-label-container ag-header-cell-sorted-none">
-                                                                            <div class="ag-header-cell-label">
-                                                                                <span class="ag-header-cell-text">날짜</span>
+                                                                     <div class="list-header-cell list-header-cell-sortable list-focus-managed" style="left: 0px; width: 312px;">
+                                                                        <div class="list-header-cell-resize"></div>
+                                                                        <div class="list-cell-label-container list-header-cell-sorted-none">
+                                                                            <div class="list-header-cell-label">
+                                                                                <span class="list-header-cell-text">충전일자</span>
                                                                             </div>
                                                                         </div>
                                                                      </div>
 
                                                                       <!-- #행 제목 구분 2 -->
-                                                                     <div class="ag-header-cell ag-header-cell-sortable ag-center-aligned-header ag-focus-managed" style="left: 312px; width: 312px;">
-                                                                        <div class="ag-header-cell-resize"></div>
-                                                                        <div class="ag-cell-label-container ag-header-cell-sorted-none">
-                                                                            <div class="ag-header-cell-label">
-                                                                                <span class="ag-header-cell-text">후불 결제 프로젝트</span>
+                                                                     <div class="list-header-cell list-header-cell-sortable list-center-aligned-header list-focus-managed" style="left: 312px; width: 312px;">
+                                                                        <div class="list-header-cell-resize"></div>
+                                                                        <div class="list-cell-label-container list-header-cell-sorted-none">
+                                                                            <div class="list-header-cell-label">
+                                                                                <span class="list-header-cell-text">고객명</span>
                                                                             </div>
                                                                         </div>
                                                                      </div>
 
                                                                      <!-- #행 제목 구분 3 -->
-                                                                      <div class="ag-header-cell ag-header-cell-sortable ag-center-aligned-header ag-focus-managed" style="left: 624px; width: 312px;">
-                                                                        <div class="ag-header-cell-resize"></div>
-                                                                        <div class="ag-cell-label-container ag-header-cell-sorted-none">
-                                                                            <div class="ag-header-cell-label">
-                                                                                <span class="ag-header-cell-text">후불 결제 캠페인</span>
+                                                                      <div class="list-header-cell list-header-cell-sortable list-center-aligned-header list-focus-managed" style="left: 624px; width: 312px;">
+                                                                        <div class="list-header-cell-resize"></div>
+                                                                        <div class="list-cell-label-container list-header-cell-sorted-none">
+                                                                            <div class="list-header-cell-label">
+                                                                                <span class="list-header-cell-text">충전기 정보</span>
                                                                             </div>
                                                                         </div>
                                                                       </div>
 
                                                                       <!-- #행 제목 구분 4 -->
-                                                                       <div class="ag-header-cell ag-header-cell-sortable ag-center-aligned-header ag-focus-managed" style="left: 936px; width: 312px;">
-                                                                        <div class="ag-header-cell-resize"></div>
-                                                                        <div class="ag-cell-label-container ag-header-cell-sorted-none">
-                                                                            <div class="ag-header-cell-label">
-                                                                                <span class="ag-header-cell-text">후불 결제 금액</span>
+                                                                       <div class="list-header-cell list-header-cell-sortable list-center-aligned-header list-focus-managed" style="left: 936px; width: 312px;">
+                                                                        <div class="list-header-cell-resize"></div>
+                                                                        <div class="list-cell-label-container list-header-cell-sorted-none">
+                                                                            <div class="list-header-cell-label">
+                                                                                <span class="list-header-cell-text">충전량(kWh)</span>
                                                                             </div>
                                                                         </div>
                                                                      </div>
 
                                                                      <!-- #행 제목 구분 5 -->
-                                                                     <div class="ag-header-cell ag-header-cell-sortable ag-center-aligned-header ag-focus-managed" style="left: 1248px; width: 311px;">
-                                                                        <div class="ag-header-cell-resize"></div>
-                                                                        <div class="ag-cell-label-container ag-header-cell-sorted-none">
-                                                                            <div class="ag-header-cell-label">
-                                                                                <span class="ag-header-cell-text">후불 결제 잔액반환</span>
+                                                                     <div class="list-header-cell list-header-cell-sortable list-center-aligned-header list-focus-managed" style="left: 1248px; width: 311px;">
+                                                                        <div class="list-header-cell-resize"></div>
+                                                                        <div class="list-cell-label-container list-header-cell-sorted-none">
+                                                                            <div class="list-header-cell-label">
+                                                                                <span class="list-header-cell-text">결제금액</span>
                                                                             </div>
                                                                         </div>
                                                                      </div>
@@ -164,122 +167,122 @@
 
                                                     <!-- AG Middle -->
                                                     <!-- 행 내용 영역 -->
-                                                     <div class="ag-body-viewport ag-row-no-animation ag-layout-auto-height">
+                                                     <div class="list-body-viewport list-row-no-animation list-layout-auto-height">
                                                         <!-- AG Row Container center -->
-                                                         <div class="ag-center-cols-clipper" style="height: 384px;">
-                                                            <div class="ag-center-cols-viewport" style="height: 100%;">
-                                                                <div class="ag-center-cols-container" style="height: 384px; width: 1559px;">
+                                                         <div class="list-center-cols-clipper" style="height: 384px;">
+                                                            <div class="list-center-cols-viewport" style="height: 100%;">
+                                                                <div class="list-center-cols-container" style="height: 384px; width: 1559px;">
 
                                                                     <!-- 행 1 -->
-                                                                     <div class="ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-even ag-row-first" style="transform: translateY(0px); height: 48px;">
+                                                                     <div class="list-row-no-focus list-row list-row-level-0 list-row-position-absolute list-row-even list-row-first" style="transform: translateY(0px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div> 
                                                                      </div>
 
                                                                     <!-- 행 2 -->
-                                                                     <div class="ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-odd" style="transform: translateY(48px); height: 48px;">
+                                                                     <div class="list-row-no-focus list-row list-row-level-0 list-row-position-absolute list-row-odd" style="transform: translateY(48px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-18</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                         <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div>
+                                                                         <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div>
                                                                       </div>
 
                                                                     <!-- 행 3 -->
-                                                                     <div class="ag-row ag-row-level-0 ag-row-position-absolute ag-row-even ag-row-no-focus" style="transform: translateY(96px); height: 48px;">
+                                                                     <div class="list-row list-row-level-0 list-row-position-absolute list-row-even list-row-no-focus" style="transform: translateY(96px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-17</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div> 
                                                                       </div>
 
                                                                     <!-- 행 4 -->
-                                                                     <div class="ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-odd" style="transform: translateY(144px); height: 48px;">
+                                                                     <div class="list-row-no-focus list-row list-row-level-0 list-row-position-absolute list-row-odd" style="transform: translateY(144px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-16</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div>
                                                                      </div>
 
                                                                     <!-- 행 5 -->
-                                                                     <div class="ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-even" style="transform: translateY(192px); height: 48px;">
+                                                                     <div class="list-row-no-focus list-row list-row-level-0 list-row-position-absolute list-row-even" style="transform: translateY(192px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-15</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div> 
                                                                       </div>
 
                                                                     <!-- 행 6 -->
-                                                                     <div class="ag-row ag-row-level-0 ag-row-position-absolute ag-row-odd ag-row-focus" style="transform: translateY(240px); height: 48px;">
+                                                                     <div class="list-row list-row-level-0 list-row-position-absolute list-row-odd list-row-focus" style="transform: translateY(240px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-14</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-focus ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-focus list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div> 
                                                                      </div>
 
                                                                     <!-- 행 7 -->
-                                                                     <div class="ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute ag-row-even"style="transform: translateY(288px); height: 48px;" >
+                                                                     <div class="list-row-no-focus list-row list-row-level-0 list-row-position-absolute list-row-even"style="transform: translateY(288px); height: 48px;" >
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-13</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div> 
                                                                      </div>
 
                                                                     <!-- 행 8 -->
-                                                                     <div class="ag-row ag-row-level-0 ag-row-position-absolute ag-row-odd ag-row-last ag-row-no-focus" style="transform: translateY(336px); height: 48px;">
+                                                                     <div class="list-row list-row-level-0 list-row-position-absolute list-row-odd list-row-last list-row-no-focus" style="transform: translateY(336px); height: 48px;">
                                                                         <!-- 날짜 -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-center-aligned-cell ag-cell-value" style="left: 0px; width: 312px;">2026-01-12</div>
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-center-aligned-cell list-cell-value" style="left: 0px; width: 312px;">2026-01-19</div>
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 312px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 312px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 624px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 624px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 936px; width: 312px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 936px; width: 312px;">-</div> 
                                                                         <!-- # -->
-                                                                        <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-right-aligned-cell ag-cell-value" style="left: 1248px; width: 311px;">-</div> 
+                                                                        <div class="list-cell list-cell-not-inline-editing list-cell-normal-height list-right-aligned-cell list-cell-value" style="left: 1248px; width: 311px;">-</div> 
                                                                      </div>
                                                                 </div>
                                                             </div>

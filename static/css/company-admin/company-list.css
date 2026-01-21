@@ -303,27 +303,27 @@
 }
 
 /* box-body, 목록(그리드) 영역 */
-.ag-grid, .ag-grid-angular, .ag-grid-ng2, .ag-grid-polymer, .ag-grid-aurelia {
+.list-grid, .list-grid-angular, .list-grid-ng2, .list-grid-polymer, .list-grid-aurelia {
     display: block;
 }
 
-.ag-grid {
+.list-grid {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.ag-grid-inner {
+.list-grid-inner {
     width: 100%;
     height: 100%;
 }
 
 /* AG Grid */
-.ag-ltr {
+.list-ltr {
     direction: ltr;
 }
 
-.ag-root-wrapper {
+.list-root-wrapper {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -334,7 +334,7 @@
     cursor: default;
 }
 
-.ag-root-wrapper-body {
+.list-root-wrapper-body {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -343,13 +343,13 @@
 }
 
 /* AG Grid Body */
-.ag-unselectable {
+.list-unselectable {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-.ag-root {
+.list-root {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -358,7 +358,7 @@
     position: relative;
 }
 
-.ag-root.ag-layout-normal, .ag-root.ag-layout-auto-height {
+.list-root.list-layout-normal, .list-root.list-layout-auto-height {
     overflow: hidden;
     -webkit-box-flex: 1;
     flex: 1 1 auto;
@@ -366,13 +366,13 @@
 }
 
 /* 헤더: 행 제목 영역 */
-.ag-header, .ag-pinned-left-header, .ag-pinned-right-header {
+.list-header, .list-pinned-left-header, .list-pinned-right-header {
     display: inline-block;
     overflow: hidden;
     position: relative;
 }
 
-.ag-header {
+.list-header {
     display: -webkit-box;
     display: flex;
     width: 100%;
@@ -382,7 +382,7 @@
     white-space: nowrap;
 }
 
-.ag-header-viewport, .ag-floating-top-viewport, .ag-body-viewport, .ag-center-cols-viewport, .ag-floating-bottom-viewport, .ag-body-horizontal-scroll-viewport, .ag-virtual-list-viewport {
+.list-header-viewport, .list-floating-top-viewport, .list-body-viewport, .list-center-cols-viewport, .list-floating-bottom-viewport, .list-body-horizontal-scroll-viewport, .list-virtual-list-viewport {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
     overflow: hidden;
@@ -391,27 +391,27 @@
     min-width: 0;
 }
 
-.ag-header-container, .ag-floating-top-container, .ag-body-container, .ag-pinned-right-cols-container, .ag-center-cols-container, .ag-pinned-left-cols-container, .ag-floating-bottom-container, .ag-body-horizontal-scroll-container, .ag-full-width-container, .ag-floating-bottom-full-width-container, .ag-virtual-list-container {
+.list-header-container, .list-floating-top-container, .list-body-container, .list-pinned-right-cols-container, .list-center-cols-container, .list-pinned-left-cols-container, .list-floating-bottom-container, .list-body-horizontal-scroll-container, .list-full-width-container, .list-floating-bottom-full-width-container, .list-virtual-list-container {
     position: relative;
 }
 
-.ag-header-container, .ag-floating-top-container, .ag-floating-bottom-container {
+.list-header-container, .list-floating-top-container, .list-floating-bottom-container {
     height: 100%;
     white-space: nowrap;
 }
 
-.ag-header-row {
+.list-header-row {
     overflow: hidden;
     position: absolute;
     min-height: 68px;
 }
 
 /* 제목 구분 */
-.ag-header-cell-sortable {
+.list-header-cell-sortable {
     cursor: pointer;
 }
 
-.ag-header-cell {
+.list-header-cell {
     display: -webkit-inline-box;
     display: inline-flex;
     -webkit-box-align: center;
@@ -425,7 +425,7 @@
     background-color: #fcfcfc;
 }
 
-.ag-header-cell-resize {
+.list-header-cell-resize {
     position: absolute;
     top: 0;
     z-index: 2;
@@ -434,11 +434,11 @@
     cursor: ew-resize;
 }
 
-.ag-ltr .ag-header-cell-resize {
+.list-ltr .list-header-cell-resize {
     right: -4px;
 }
 
-.ag-cell-label-container {
+.list-cell-label-container {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
@@ -453,11 +453,11 @@
     overflow: hidden;
 }
 
-.ag-cell-label-container {
+.list-cell-label-container {
     width: 100%;
 }
 
-.ag-header-group-cell-label, .ag-header-cell-label {
+.list-header-group-cell-label, .list-header-cell-label {
     display: -webkit-box;
     display: flex;
     -webkit-box-flex: 1;
@@ -467,17 +467,17 @@
     align-self: stretch;
 }
 
-.ag-header-cell-label {
+.list-header-cell-label {
     justify-content: center;
 }
 
-.ag-header-cell-text {
+.list-header-cell-text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.ag-header-cell-text {
+.list-header-cell-text {
     overflow: hidden;
     max-width: 85%;
     font-size: 12px;
@@ -488,18 +488,18 @@
 }
 
 /* 미들: 행 내용 영역 */
-.ag-body-viewport {
+.list-body-viewport {
     display: -webkit-box;
     display: flex;
 }
 
-.ag-ltr .ag-body, .ag-ltr .ag-floating-top, .ag-ltr .ag-floating-bottom, .ag-ltr .ag-header, .ag-ltr .ag-body-viewport, .ag-ltr .ag-body-horizontal-scroll {
+.list-ltr .list-body, .list-ltr .list-floating-top, .list-ltr .list-floating-bottom, .list-ltr .list-header, .list-ltr .list-body-viewport, .list-ltr .list-body-horizontal-scroll {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
 }
 
-.ag-center-cols-clipper {
+.list-center-cols-clipper {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
     overflow: hidden;
@@ -509,32 +509,32 @@
     transform: translateZ(0);
 }
 
-.ag-center-cols-viewport {
+.list-center-cols-viewport {
     overflow-x: auto;
     width: 100%;
 }
 
-.ag-center-cols-container, .ag-pinned-right-cols-container {
+.list-center-cols-container, .list-pinned-right-cols-container {
     display: block;
 }
 
 /* 행 구분 */
-.ag-row {
+.list-row {
     width: 100%;
     white-space: nowrap;
 }
 
-.ag-row-position-absolute {
+.list-row-position-absolute {
     position: absolute;
 }
 
-.ag-row-no-animation .ag-row {
+.list-row-no-animation .list-row {
     -webkit-transition: background-color .1s;
     transition: background-color .1s;
 }
 
 /* 열 구분 */
-.ag-cell {
+.list-cell {
     display: inline-block;
     position: absolute;
     height: 100%;
@@ -548,25 +548,25 @@
     white-space: nowrap;
 }
 
-.ag-cell-value {
+.list-cell-value {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
 }
 
-.ag-cell-value, .ag-group-value {
+.list-cell-value, .list-group-value {
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.ag-center-aligned-cell {
+.list-center-aligned-cell {
     text-align: center;
 }
 
-.ag-right-aligned-cell {
+.list-right-aligned-cell {
     text-align: right;
 }
 
-.ag-full-width-container, .ag-floating-top-full-width-container, .ag-floating-bottom-full-width-container {
+.list-full-width-container, .list-floating-top-full-width-container, .list-floating-bottom-full-width-container {
     position: absolute;
     top: 0;
     left: 0;
