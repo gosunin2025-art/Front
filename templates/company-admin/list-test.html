@@ -1,32 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
 
-        <style>
-        /* .select2-hidden-accessible {
-            overflow: hidden !important;
-            position: absolute !important;
-            width: 1px !important;
-            min-width: 1px !important;
-            height: 1px !important;
-            margin: -1px !important;
-            padding: 0 !important;
-            border: 0 !important;
-            clip: rect(0 0 0 0) !important;
-        } */
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/static/css/company-admin/company-list.css">
 
-        </style>
-    </head>
-    <body>
-        <select class="select2-single small select2-hidden-accessible">
-            <option value="10">10 Row</option>
-            <option value="20">20 Row</option>
-            <option value="30">30 Row</option>
-            <option value="40">40 Row</option>
-            <option value="50">50 Row</option>
-        </select>
-    </body>
+</head>
+<body>
+    <!-- 날짜 선택 박스 -->
+    <div class="box-filter">
+        <div class="comp-datepicker">
+            <div class="inner-datepicker">
+                <!-- 캘린더 이미지 -->
+                <i class="icon icon-calendar"></i>
+                <input type="text" class="tf-comm datepicker-range" id="datepicker">
+                <span class="fz-12 fc-2">
+                    사용자 설정
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </html>

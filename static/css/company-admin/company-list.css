@@ -193,7 +193,7 @@
 }
 
 .comp-datepicker .tf-comm.datepicker-range {
-    width: 310px;
+    width: 360px;
     padding-left: 52px;
 }
 
@@ -766,3 +766,77 @@
 .page-nav .btn-nav.last:disabled .icon {
     background: url(/static/images/icon_double_arrow_right.svg) no-repeat -1px -1px;
 }
+
+/* 달력 영역 */
+.daterangepicker {
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    z-index: 10000;
+    border: 1px solid #babdc0;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 32px 40px #0a164614;
+}
+
+.daterangepicker.show-ranges.opensleft {
+    margin-right: -81px;
+}
+
+/* 날짜 선택 범위 */
+.daterangepicker .ranges {
+    float: right;
+}
+
+.daterangepicker .ranges ul {
+    padding: 22px 32px;
+}
+
+.daterangepicker .ranges ul li {
+    padding: 5px 6px;
+    margin: 10px 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #adb5bd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.daterangepicker .ranges ul li[data-range-key="사용자 설정"] {
+    width: 69px;
+}
+
+/* 시작일 선택 달력 영역 */
+.daterangepicker .drp-calendar {
+    display: inline-block;
+    float: left;
+    padding: 36px 32px 32px;
+}
+
+.daterangepicker.show-ranges .drp-calendar.left, .daterangepicker.show-ranges .drp-calendar.right {
+    position: relative;
+    padding-top: 72px;
+}
+
+.daterangepicker.show-ranges .drp-calendar.left {
+    padding-right: 18px;
+}
+
+.daterangepicker.show-ranges .drp-calendar.left:before, .daterangepicker.show-ranges .drp-calendar.right:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    border-bottom: 1px solid #dde2e6;
+    font-size: 12px;
+    line-height: 36px;
+    background: #fafafb;
+    color: #495057;
+    text-align: center;
+}
+
+.daterangepicker.show-ranges .drp-calendar.left:before {
+    content: "시작일";
+}
+
