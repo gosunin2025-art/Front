@@ -13,6 +13,9 @@
 .none{
     display: none;
 }
+.round-fix{
+    border-radius: 8px;
+}
 
 /* 뱃지(N, 숫자) */
 .NotificationBadge{
