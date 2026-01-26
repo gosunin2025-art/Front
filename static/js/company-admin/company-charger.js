@@ -25,7 +25,7 @@ function initPagination() {
         link.addEventListener('click', (e) => {
             // 임시) href가 #!일 때만 기본 이동 방지
             // 실제 URL로 이동하게 되면 제거
-            // e.preventDefault();
+            e.preventDefault();
 
             // 기존 current 스타일 제거
             pageLinks.forEach((a) => a.classList.remove('current'));
@@ -41,11 +41,13 @@ function initPagination() {
         });
     });
 
-    //  서버 연동 시(검색조건 유지 페이지 이동):
-    //  hidden page 값 변경 후 form submit
-    //  예)
-    //  document.getElementById('page').value = page;
-    //  document.getElementById('news-board-search').submit();
+    //  [검색 조건 유지용 페이지 이동 처리]★
+    //  검색 후 페이지네이션을 클릭해도
+    //  검색 조건이 유지되도록 하기 위함
+
+    //  클릭한 페이지 번호를 hidden input(page)에 넣고
+    //  기존 검색 form을 다시 submit
+    //  ->서버에서는 검색 조건 + 페이지 번호를 함께 받게 됨
 }
 
 // [탭 초기화]
@@ -61,7 +63,7 @@ function initTabs() {
         li.addEventListener('click', (e) => {
             // 임시) href가 #!일 때만 기본 이동 방지
             // 실제 URL로 이동하게 되면 제거
-            // e.preventDefault();
+            e.preventDefault();
 
             // 기존 active 스타일 제거
             tabItems.forEach((item) => item.classList.remove('active'));
@@ -97,7 +99,7 @@ function initSearch() {
         // 입력된 검색어 (앞뒤 공백 제거)
         const keyword = searchInput.value.trim();
 
-        //  검색 기능 확인용 콘솔
+        //  임시) 검색 기능 확인용 콘솔
         console.log('검색 조건', searchType);
         console.log('검색어', keyword);
 
