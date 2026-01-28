@@ -283,8 +283,9 @@
 
 .wrap-filter .box-right .btn {
     width: 150px;
-    height: 100%;
-    line-height: normal;
+    height: 50px;
+    /* line-height: normal; */
+    line-height: 50px;
 }
 
 .btn-icon .icon {
