@@ -79,7 +79,7 @@ const showToast = (showId) => {
 
     timeSet = setTimeout(() => {
         hideToast(showContainer);
-    }, 2000);
+    }, 3000);
 };
 
 // 하이드 이벤트
