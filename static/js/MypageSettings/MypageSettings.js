@@ -1,18 +1,26 @@
+// 전역 변수 선언
+const body = document.querySelector("body");
 const overlay = document.querySelector(".ConfirmModal_overlay");
 const modals = document.querySelectorAll(".ConfirmModal_confirmModal");
-const menuItems = document.querySelectorAll(".menuItem_container");
+const passwordModal = document.getElementById("passwordModal");
 
+console.log("passwordModal:", passwordModal); // 디버깅
+
+// 각 모달 선택
 const nicknameModal = modals[0];
 const emailModal = modals[1];
 const privateModal = modals[2];
 
+// 메뉴 아이템 클릭 (닉네임, 이메일, 지역) - settings_menusArea 안에 있는 것만
+const menuItems = document.querySelectorAll(".settings_menusArea .menuItem_container");
+console.log("menuItems:", menuItems.length); // 디버깅
 
 menuItems.forEach(item => {
     const title = item.querySelector(".menuItem_title").textContent.trim();
 
     item.addEventListener("click", () => {
+        console.log("Menu clicked:", title); // 디버깅
         modals.forEach(m => m.style.display = "none");
-
         overlay.style.display = "flex";
 
         if (title === "닉네임") {
@@ -24,7 +32,7 @@ menuItems.forEach(item => {
     });
 });
 
-
+// ConfirmModal 닫기 버튼
 const closeButtons = document.querySelectorAll(".button_close");
 closeButtons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -32,33 +40,82 @@ closeButtons.forEach(btn => {
         modals.forEach(m => m.style.display = "none");
     });
 });
-const emailOkaymodal = emailModal.querySelector(".buttonEmail_okay");
 
+// 이메일 확인 버튼 클릭 시 비밀번호 확인 모달 열기
+const emailOkaymodal = emailModal.querySelector(".buttonEmail_okay");
 emailOkaymodal.addEventListener("click", () => {
-    console.log()
     emailModal.style.display = "none";
     privateModal.style.display = "flex";
 });
 
+// 비밀번호 설정 버튼 - settings_settingsList 내부에서만 찾기
+// const settingsLists = document.querySelectorAll(".settings_settingsList");
+// settingsLists.forEach(settingsList =>{
+//     console.log("settingsLists:", settingsList); // 디버깅
+
+//         settingsList.addEventListener("click",()=>{
+//             document.getElementById("passwordModal").style.display ="flex";
+//         })
+
+// })
+
+const modalOpen = (thisModal) => {
+    const OpenModalName = document.getElementById(thisModal);
+    body.classList.add('hidden');
+    OpenModalName.classList.add('active');
+};
 
 
+    // const settingItems = settingsList.querySelectorAll(".settingItem_container1");
+    // console.log("settingItems:", settingItems.length); // 디버깅
+    
+    // settingItems.forEach((item, index) => {
+    //     const titleElement = item.querySelector(".settingItem_title");
+    //     console.log(`settingItem ${index}:`, titleElement?.textContent.trim()); // 디버깅
+        
+    //     if (titleElement && titleElement.textContent.trim() === "비밀번호 설정") {
+    //         console.log("비밀번호 설정 버튼 찾음!"); // 디버깅
+            
+    //         item.addEventListener("click", (e) => {
+    //             console.log("비밀번호 설정 클릭됨!"); // 디버깅
+    //             e.preventDefault();
+    //             e.stopPropagation();
+                
+    //             if (passwordModal) {
+    //                 body.style.overflow = "hidden";
+    //                 passwordModal.style.display = "flex";
+    //                 console.log("모달 열림"); // 디버깅
+    //             } else {
+    //                 console.log("passwordModal이 없습니다!"); // 디버깅
+    //             }
+    //         });
+    //     }
+    // });
 
+// 비밀번호 모달 닫기
+if (passwordModal) {
+    const passwordCloseBtn = passwordModal.querySelector(".button-close");
+    console.log("passwordCloseBtn:", passwordCloseBtn); // 디버깅
+    
+    if (passwordCloseBtn) {
+        passwordCloseBtn.addEventListener("click", () => {
+            console.log("비밀번호 모달 닫기 클릭"); // 디버깅
+            body.style.overflow = "";
+            passwordModal.style.display = "none";
+        });
+    }
 
-// layout
-const bodys = document.querySelector("body");
-const modal = document.getElementById("passwordModal");
+    // 모달 외부 클릭 시 닫기
+    passwordModal.addEventListener("click", (e) => {
+        if (e.target === passwordModal) {
+            body.style.overflow = "";
+            passwordModal.style.display = "none";
+        }
+    });
+}
 
-// buttons
-const zz1Btn = document.getElementById("settingItem_container");
-const confirms = document.querySelectorAll(".button-confirm");
-const closes = document.querySelectorAll(".button-close");
-
-// const inputContainers = document.querySelectorAll(".currentPassword-wrap");
+// input 필드 포커스 효과 및 비밀번호 보기/숨기기
 const inputFields = document.querySelectorAll(".inputField");
-// 
-
-
-// 포커스
 inputFields.forEach(inputField => {
     const input = inputField.querySelector(".input");
     const button = inputField.querySelector(".button-inInput");
@@ -66,74 +123,30 @@ inputFields.forEach(inputField => {
     inputField.addEventListener("focusin", () => {
         inputField.classList.add("focus");
     });
+    
     inputField.addEventListener("focusout", () => {
         inputField.classList.remove("focus");
     });
+    
     if (button) {
-        button.addEventListener("mousedown", (e) => { e.preventDefault(); });
-        button.addEventListener("mousedown", (e) => {
+        button.addEventListener("mousedown", (e) => { 
+            e.preventDefault(); 
             const isPassword = input.type === "password";
             input.type = isPassword ? "text" : "password";
         });
     }
-})
-
-// 확인
-// const modalOpen = () => {
-//     body.classList.add("hidden");
-//     modal.classList.add('active');
-// }
-// const modalClose = () => {
-//     body.classList.remove("hidden");
-//     modal.classList.remove('active');
-// }
-
-confirms.forEach(confirm => {
-    confirm.addEventListener("click", () => {
-        bodys.classList.toggle("hidden")
-        modal.classList.toggle('active')
-        // setTimeout(() => {
-        //     modal.classList.toggle('none')
-        // }, 500);
-    })
 });
 
-const passwordmodal = document.querySelector(".settingItem_container");
-    passwordmodal.addEventListener("click", () => {
-        bodys.classList.toggle("hidden")
-        modal.classList.toggle('active')
-    })
-;
-
-
-// 닫기
-closes.forEach(close => {
-    close.addEventListener("click", () => {
-        modal.classList.remove('active')
-        bodys.classList.remove("hidden")
-        // setTimeout(() => {
-        //     modal.classList.toggle('none')
-        // }, 500);
-    })
-})
-// overlay.addEventListener("click", (e) => {
-//     if(e.target.classList.contains)
-// })
-
-
-
+// 닉네임 변경 완료 시 토스트 메시지
 document.addEventListener('click', (e) => {
     if (e.target.closest('.ButtonNickName')) {
         const toast = document.querySelector('.Toast_container');
         if (!toast) return;
 
-        console.log("토스트 작동 시작");
-
         toast.classList.add('Toast_showMobile');
 
         setTimeout(() => {
             toast.classList.remove('Toast_showMobile');
-            console.log("토스트 종료");
         }, 3000);
     }
 });
